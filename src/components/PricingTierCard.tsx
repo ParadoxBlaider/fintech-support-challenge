@@ -13,7 +13,7 @@ const PricingTierCard = ({ plan }:PricingTierCardProps) => {
   };
   return (
     <article
-      className={`cursor-pointer hover:scale-110 transition-transform min-w-64 max-w-64 bg-viio-background rounded-md py-6 px-4 text-viio-principal-text grid gap-4 text-center min-h-80 items-center content-between relative ${getFeatureStyleCard(plan.isFeatured)}`}
+      className={`border border-viio-secondary cursor-pointer hover:scale-110 transition-transform min-w-64 max-w-64 bg-viio-background rounded-md py-6 px-4 text-viio-principal-text grid gap-4 text-center min-h-80 items-center content-between relative ${getFeatureStyleCard(plan.isFeatured)}`}
       role="region"
       saria-aria-labelledby={`plan-title-${plan.planName.toLocaleLowerCase()}`}
     >
