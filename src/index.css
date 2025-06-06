@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+@theme {
+  --color-viio-primary: #4F46E5;
+  --color-viio-secondary: #6B7280;
+  --color-viio-background: #FFFFFF;
+  --color-viio-background-alternative: #F3F4F6;
+  --color-viio-principal-text: #111827;
+}

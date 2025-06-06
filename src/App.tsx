@@ -43,17 +43,27 @@ function App() {
       ctaText: 'Select Premium'
     },
   ]);
+
+  const reorderedPlans = (() => {
+    const featured = plans.find(plan => plan.isFeatured);
+    const others = plans.filter(plan => !plan.isFeatured);
+    if (featured) {
+      return [others[0], featured, ...others.slice(1)];
+    }
+    return plans;
+  })();
+
   return (
-    <>
-      <div>
-        <h1>VIIO plans</h1>
+    <main className="p-2 bg-viio-background-alternative font-sans min-h-screen flex flex-col justify-center items-center gap-8">
+      <h1 className="text-xl font-semibold">¡Fintech plans!</h1>
+      <section className="max-lg:grid min-lg:flex items-center justify-center gap-4">
         {
-          plans.map((plan, index) => (
+          reorderedPlans.map((plan, index) => (
             <PricingTierCard plan={plan}/>
           ))
         }
-      </div>
-    </>
+      </section>
+    </main>
   )
 }
 
